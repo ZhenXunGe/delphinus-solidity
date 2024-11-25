@@ -23,7 +23,7 @@ contract Withdraw is Transaction {
         returns (uint256[] memory)
     {
         uint256[] memory ops = new uint256[](4);
-        uint256 tokenIdx = bytesToUint(witness, cursor + 14, 2);
+        uint256 tokenIdx = bytesToUint(witness, cursor + 12, 4);
         uint256 transferAmount = bytesToUint(witness, cursor + 16, 32);
         uint256 l1recipent = bytesToUint(witness, cursor + 48, 32);
 
